@@ -1,18 +1,18 @@
+#pragma once
 #include "Ochirov.h"
 #include <string>
 #include <vector>
-using namespace std;
 
 class Mission {
 public:
-    string name;
-    string description;
+    std::string name;
+    std::string description;
 };
 
 class MissionControl {
 public:
-    vector<Mission> missions;
-    void createMission(string name, string description);
+    std::vector<Mission> missions;
+    void createMission(std::string name, std::string description);
     void SuccessMission_ontheplanet(int dangerous, int bright, int fuel, int distance);
 };
 
