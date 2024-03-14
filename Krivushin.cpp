@@ -1,8 +1,8 @@
 #include <iostream>
 #include "Krivushin.h"
-using namespace std;
 
- void MissionControl::createMission(string name, string description) {
+
+ void MissionControl::createMission(std::string name, std::string description) {
         Mission mission;
         mission.name = name;
         mission.description = description;
@@ -10,18 +10,18 @@ using namespace std;
     }
 void MissionControl::SuccessMission_ontheplanet(int dangerous, int bright, int fuel, int distance) {
     if (dangerous != 1 && bright <= 10000 && fuel >= distance) {
-        cout << "The Mission will be completed safely" << endl;
+        std::cout << "The Mission will be completed safely" << std::endl;
     }
     else {
-        cout << "The Mission will fail" << endl;
+        std::cout << "The Mission will fail" << std::endl;
     }
 }
 
  void Life::PercentofLife(bool water, int distance_from_star) {
         if (water == true && distance_from_star <= 10000) {
-            cout << "Yes, Life is possible" << endl;
+            std::cout << "Yes, Life is possible" << std::endl;
         }
         else {
-            cout << "No, impossible" << endl;
+            std::cout << "No, impossible" << std::endl;
         }
     }
